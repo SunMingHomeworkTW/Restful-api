@@ -13,6 +13,11 @@ public class Company {
     private String companyName;
     private Integer employeesNumber;
 
+    @OneToMany(mappedBy = "companyId", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+    //拥有mappedBy注解的实体类为关系被维护端
+    //mappedBy="companyId"中的companyId是Employee中的companyId属性
+    private Set<Employee> employees = new HashSet<Employee>();
+
     public Company() {
     }
 

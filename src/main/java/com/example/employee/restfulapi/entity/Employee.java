@@ -13,6 +13,9 @@ public class Employee {
     private Integer age;
     private String gender;
     private Integer salary;
+
+//    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, optional = false)//可选属性optional=false,表示companyId不能为空
+//    @JoinColumn(name = "companyId")//设置在Employee表中的关联字段(外键)
     private Long companyId;
 
     public Employee() {
