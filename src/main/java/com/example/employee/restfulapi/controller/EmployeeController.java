@@ -47,6 +47,7 @@ public class EmployeeController {
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     Employee createEmployee(@RequestBody Employee employee){
+        Employee newEmployee=employeeRepository.save(employee);
         return employeeRepository.save(employee);
     }
 
