@@ -15,9 +15,9 @@ public class Employee {
     private Integer salary;
     private Long companyId;
 
-//    @ManyToOne(targetEntity = Company.class)
-//    @JoinColumn(name ="companyId", insertable = false, updatable = false)
-//    private Company company;
+    @ManyToOne(targetEntity = Company.class)
+    @JoinColumn(name ="companyId", insertable = false, updatable = false)
+    private Company company;
 
     public Employee() {
     }
@@ -30,7 +30,7 @@ public class Employee {
         this.companyId = companyId;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
